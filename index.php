@@ -6,7 +6,8 @@
     <title>Document</title>
     <link href="src/output.css" rel="stylesheet">
 </head>
-<body class="bg-red-500 ">
+<body class="">
+    <?php include_once "includes/header.php"; ?>
     
 </body>
 </html>

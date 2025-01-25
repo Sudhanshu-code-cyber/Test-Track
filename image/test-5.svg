@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="20" viewBox="0 0 20 20">
+  <defs>
+    <clipPath id="clip-Explore-Aptitude-Tests_Purple">
+      <rect width="20" height="20"/>
+    </clipPath>
+  </defs>
+  <g id="Explore-Aptitude-Tests_Purple" data-name="Explore-Aptitude-Tests – Purple" clip-path="url(#clip-Explore-Aptitude-Tests_Purple)">
+    <g id="bulb-63-2" transform="translate(0.027 0.027)">
+      <path id="Path_49325" data-name="Path 49325" d="M1,9.973H2.2M3.632,3.632l.837.837M9.973,1V2.2m6.341,1.436-.837.837m3.469,5.5h-1.2" fill="none" stroke="#8246af" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1"/>
+      <path id="Path_49326" data-name="Path 49326" d="M17.767,12.384A5.384,5.384,0,0,0,7,12.384a5.418,5.418,0,0,0,2.991,4.845v4.127h4.785V17.229A5.418,5.418,0,0,0,17.767,12.384Zm-7.776,6.58h4.785" transform="translate(-2.411 -2.411)" fill="none" stroke="#8246af" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1"/>
+    </g>
+  </g>
+</svg>

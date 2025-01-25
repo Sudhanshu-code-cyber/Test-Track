@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="20" viewBox="0 0 20 20">
+  <defs>
+    <clipPath id="clip-Explore-Coding-Tests_Blue">
+      <rect width="20" height="20"/>
+    </clipPath>
+  </defs>
+  <g id="Explore-Coding-Tests_Blue" data-name="Explore-Coding-Tests – Blue" clip-path="url(#clip-Explore-Coding-Tests_Blue)">
+    <g id="note-code" transform="translate(-0.025 0.385)">
+      <path id="Path_49327" data-name="Path 49327" d="M12.487,3H19.05V17.768l-5.743.82L6.743,16.127,1,17.768V3H7.564" transform="translate(0 -0.359)" fill="none" stroke="#009de0" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1"/>
+      <path id="Path_49328" data-name="Path 49328" d="M9,1h4.923V4.282H9Z" transform="translate(-1.436 0)" fill="none" stroke="#009de0" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1"/>
+      <path id="Path_49329" data-name="Path 49329" d="M7.641,9.641,6,11.282l1.641,1.641M14.2,9.641l1.641,1.641L14.2,12.923m-4.1,1.641L11.743,8" transform="translate(-0.898 -1.257)" fill="none" stroke="#009de0" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1"/>
+    </g>
+  </g>
+</svg>

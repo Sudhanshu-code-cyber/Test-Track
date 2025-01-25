@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="20" viewBox="0 0 20 20">
+  <defs>
+    <clipPath id="clip-Explore-Domain-Tests_Teal">
+      <rect width="20" height="20"/>
+    </clipPath>
+  </defs>
+  <g id="Explore-Domain-Tests_Teal" data-name="Explore-Domain-Tests – Teal" clip-path="url(#clip-Explore-Domain-Tests_Teal)">
+    <g id="pc" transform="translate(0.165 0.165)">
+      <path id="Path_5839" data-name="Path 5839" d="M10.819,22.213V19M6,22.213h9.638" transform="translate(-0.984 -3.543)" fill="none" stroke="#0077a0" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1"/>
+      <circle id="Ellipse_37" data-name="Ellipse 37" cx="0.858" cy="0.858" r="0.858" transform="translate(9.576 3.233)" fill="#0077a0"/>
+      <path id="Path_5840" data-name="Path 5840" d="M17.063,15.457H2.606A1.606,1.606,0,0,1,1,13.85V2.606A1.606,1.606,0,0,1,2.606,1H17.063a1.606,1.606,0,0,1,1.606,1.606V13.85A1.606,1.606,0,0,1,17.063,15.457ZM1,12.244H18.669" fill="none" stroke="#0077a0" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1"/>
+    </g>
+  </g>
+</svg>

@@ -1,3 +1,5 @@
+<?php include_once "config/connect.php"; ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -141,7 +143,7 @@
 
             <div class="flex flex-1 flex-col py-22 gap-5 ">
                 <div class=" flex flex-1 w-full   gap-5 px-10 ">
-                    <div class="flex gap-2 w-[45vh] justify-between items-center bg-white shadow-lg rounded px-3 py-1">
+                    <div class="flex gap-2 w-[48vh] justify-between items-center bg-white shadow-lg rounded px-3 py-2">
                         <div class="flex gap-2">
                             <img src="image/test-1.svg" alt="">
                             <p class="text-sm font-semibold">Explore Psychometrics Test</p>
@@ -153,7 +155,7 @@
 
                     </div>
 
-                    <div class="flex gap-2 w-[45vh] justify-between items-center bg-white shadow-lg rounded px-3 py-1">
+                    <div class="flex gap-2 w-[48vh] justify-between items-center bg-white shadow-lg rounded px-3 py-2">
                         <div class="flex gap-2">
                             <img src="image/test-2.svg" alt="">
                             <p class="text-sm font-semibold">Explore coding Test</p>
@@ -170,7 +172,7 @@
                 </div>
 
                 <div class=" flex flex-1 w-full   gap-5 px-10 ">
-                    <div class="flex gap-2 w-[45vh] justify-between items-center bg-white shadow-lg rounded px-3 py-1">
+                    <div class="flex gap-2 w-[48vh] justify-between items-center bg-white shadow-lg rounded px-3 py-2">
                         <div class="flex gap-2">
                             <img src="image/test-3.svg" alt="">
                             <p class="text-sm font-semibold">Explore Behavioral Test</p>
@@ -182,7 +184,7 @@
 
                     </div>
 
-                    <div class="flex gap-2 w-[45vh] justify-between items-center bg-white shadow-lg rounded px-3 py-1">
+                    <div class="flex gap-2 w-[48vh] justify-between items-center bg-white shadow-lg rounded px-3 py-2">
                         <div class="flex gap-2">
                             <img src="image/test-4.svg" alt="">
                             <p class="text-sm font-semibold">Explore Domain Test</p>
@@ -199,7 +201,7 @@
                 </div>
 
                 <div class=" flex flex-1 w-full   gap-5 px-10 ">
-                    <div class="flex gap-2 w-[45vh] justify-between items-center bg-white shadow-lg rounded px-3 py-1">
+                    <div class="flex gap-2 w-[48vh] justify-between items-center bg-white shadow-lg rounded px-3 py-2">
                         <div class="flex gap-2">
                             <img src="image/test-5.svg" alt="">
                             <p class="text-sm font-semibold">Explore Aptitude Test</p>
@@ -211,7 +213,7 @@
 
                     </div>
 
-                    <div class="flex gap-2 w-[45vh] justify-between items-center bg-white shadow-lg rounded px-3 py-1">
+                    <div class="flex gap-2 w-[48vh] justify-between items-center bg-white shadow-lg rounded px-3 py-2">
                         <div class="flex gap-2">
                             <img src="image/test-6.svg" alt="">
                             <p class="text-sm font-semibold">Explore communication skills Test</p>
@@ -227,12 +229,105 @@
 
                 </div>
 
-                
+
             </div>
 
         </div>
 
     </div>
+    <!--subjets-->
+    <div class="flex py-2 flex-1 bg-[#DBE2EF]">
+        <div class=" w-10/12 flex justify-center ml-[24%]  flex-1    ">
+            <h1 class="text-4xl   ml-10  ">Featured Tests</h1>
+
+        </div>
+        <div class="w-3/12">
+            <!-- Search Form -->
+            <form action="index.php" method="get" class="flex justify-center items-center gap-3">
+                <input type="search" name="search" placeholder="Search subjects..." id="" size="20"
+                    class="px-4 py-2 rounded-lg text-gray-900 focus:outline-none focus:ring-2 focus:ring-[#112D4E]" />
+                <input type="submit" name="find" id="" value="GO"
+                    class="bg-blue-900  cursor-pointer text-white px-6 py-2 rounded-lg hover:bg-blue-800" />
+            </form>
+        </div>
+
+    </div>
+    <div class="flex justify-center items-center py-5 gap-3 bg-orange-50 flex-col">
+
+
+        <p>You are just a single click away to rank yourself in our popular tests - TestTrack
+        </p>
+        <div class="grid grid-cols-5 mt-5 gap-5 ">
+
+            <?php
+            if (isset($_GET['find'])) {
+                $search = $_GET['search'];
+                $callingtest = mysqli_query($connect, "select * from subject where subject_name like '%$search%'");
+            } else {
+                $callingtest = mysqli_query($connect, "select * from subject");
+            }
+            while ($test = mysqli_fetch_array($callingtest)):
+                ?>
+
+                <div
+                    class="py-3 px-5 justify-center items-center hover:text-white zoom-in hover:bg-[#112D4E]  cursor-pointer  border border-gray-500">
+
+                    <p class="flex justify-center text-sm font-medium   items-center"><?= $test['subject_name']; ?></p>
+                    
+                </div>
+            <?php endwhile; ?>
+
+        </div>
+    </div>
+    <!--why choose online exam -->
+    <div class="flex flex-1 flex-col py-5 justify-center bg-[#F9F7F7] items-center">
+        <h1 class="text-4xl">Why Choose ExamOnline</h1>
+        <div class="border mt-4 border-b-2 border-gray-900 w-[40%] "></div>
+  
+        </div>
+
+        <div class="flex flex-1 bg-[#F9F7F7]  px-[10%]">
+
+            <div class="flex flex-1 flex-col gap-10">
+
+            <div class="flex gap-8">
+                <img src="image/important.svg" class="mb-10 w-8" alt="">
+            <p class="">Eliminate Physical Proctor: Embrace auto-proctor tests with <br> 
+            artificial intelligence (AI) capabilities that use face recognition <br>
+             and digital IDs to conduct tests in secure environments</p>
+            </div>
+            
+             <div class="flex gap-8">
+             <img src="image/important.svg" class="mb-10 w-8" alt="">
+
+             <p>
+             Utilize Advanced Reporting: Get reports for exams, including <br>
+              scorecards, computational analysis, and detailed analytics on all <br>
+               the candidates blazing fast.
+             </p>
+             </div>
+                <div class="flex gap-8">
+                <img src="image/important.svg" class="mb-10 w-8" alt="">
+
+                
+             <p>
+             Secure Your Data: Protect your data and ensure your intellectual <br>
+              property is never compromised through data encryption and <br>
+               secure hosting.
+             </p>
+
+             </div>
+
+            </div>
+            <div class="flex flex-1">
+                 <img src="image/examonline.png" alt="">
+            </div>
+
+        </div>
+
+    
+
+<?php include_once 'footer.php'; ?>
 
 
 

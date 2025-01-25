@@ -4,105 +4,114 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About</title>
-    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <title>About Us</title>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body class="">
+<body class="bg-gray-100 text-gray-800">
     <?php include_once "includes/header.php"; ?>
-    <!-- Header Section -->
-    <div class="flex flex-wrap lg:flex-nowrap">
-        <!-- Text Section -->
-        <div class="w-full lg:w-6/12  from-blue-50 to-white">
-            <div class="flex flex-col h-auto lg:h-[80vh] justify-center p-10 lg:p-16">
-                <h2 class="text-5xl font-bold text-blue-600 leading-tight">About Us</h2>
-                <p class="text-gray-700 mt-6 text-lg leading-relaxed">
-                    Welcome to Test-Track, the innovative remote proctoring solution that’s transforming the way online
-                    exams are conducted. Our mission is to provide the most secure, efficient, and cost-effective
-                    solution to educational institutions and corporations across the world.
-                </p>
-                <a href="#" class="mt-8 inline-block px-6 py-3 bg-[#3F72AF] text-white text-lg font-semibold rounded-md shadow-md hover:bg-[#112D4E] hover:shadow-lg transition duration-300">
-                    Learn More
-                </a>
+
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-r mt-14 from-blue-500 to-purple-500 text-white py-16 text-center">
+        <div class="container mx-auto px-6">
+            <h1 class="text-4xl lg:text-6xl font-bold mb-4">About Us</h1>
+            <p class="text-lg lg:text-xl">Empowering Innovations for a Better Tomorrow</p>
+        </div>
+    </section>
+
+    <!-- Mission and Vision -->
+    <section class="py-12 bg-white">
+        <div class="container mx-auto px-6 text-center lg:text-left">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <div>
+                    <h2 class="text-3xl font-bold mb-4">Our Mission</h2>
+                    <p class="text-gray-600">Our mission is to deliver innovative solutions that drive progress and create lasting impact for communities worldwide.</p>
+                </div>
+                <div>
+                    <h2 class="text-3xl font-bold mb-4">Our Vision</h2>
+                    <p class="text-gray-600">We envision a future where technology and collaboration empower individuals and businesses to thrive.</p>
+                </div>
             </div>
         </div>
+    </section>
 
-        <!-- Image Section -->
-        <div class="w-full lg:w-6/12 relative ">
-            <div class="p-10 flex justify-center items-center h-full">
-                <img src="https://examonline.in/wp-content/uploads/2023/03/about-us-1536x1112.png" alt="About Us"
-                    class="rounded-lg transition duration-300">
+    <!-- Our Story -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-8">Our Story</h2>
+            <div class="timeline space-y-8">
+                <div class="flex items-center">
+                    <div class="w-3 h-3 bg-blue-500 rounded-full mr-4"></div>
+                    <p class="text-gray-600">Founded in 2010 with a vision to revolutionize the tech industry.</p>
+                </div>
+                <div class="flex items-center">
+                    <div class="w-3 h-3 bg-blue-500 rounded-full mr-4"></div>
+                    <p class="text-gray-600">Achieved milestone of 1000+ clients in 2015.</p>
+                </div>
+                <div class="flex items-center">
+                    <div class="w-3 h-3 bg-blue-500 rounded-full mr-4"></div>
+                    <p class="text-gray-600">Expanded globally with offices in 5 countries by 2020.</p>
+                </div>
             </div>
         </div>
-    </div>
+    </section>
 
-    <!-- Our Story Section -->
-    <div class="mx-8 md:mx-[10%] mt-16 bg-gradient-to-r from-pink-50 to-red-100 rounded-lg shadow-lg">
-        <div class="p-10 text-center">
-            <h3 class="text-4xl font-bold text-pink-600">Our Story</h3>
-            <hr class="mt-4 border-2 border-pink-600 w-24 mx-auto">
-            <p class="text-gray-800 mt-6 text-lg leading-relaxed">
-                Founded in 2009, Test-Track was created with the vision of transforming the traditional approach to exam
-                administration. Our founders recognized the need for a secure, reliable, and easy-to-use remote
-                proctoring solution, and began developing a product that would meet the evolving demands of modern-day
-                exams.
-                <br><br>
-                Since then, we have worked tirelessly to create a platform that offers the highest level of security,
-                reliability, and accessibility to institutions and corporations of all sizes.
-            </p>
-        </div>
-    </div>
-
-    <!-- Mission Section -->
-    <div class="flex flex-wrap mt-16 mx-8 md:mx-[10%]">
-        <!-- Mission Content -->
-        <div class="w-full lg:w-6/12 p-8">
-            <h3 class="text-4xl font-bold text-blue-600">Our Mission</h3>
-            <p class="text-gray-700 mt-6 text-lg leading-relaxed">
-                At Test-Track, we believe that remote proctoring solutions can level the playing field and provide equal
-                opportunities for students and job applicants, regardless of their location. Our mission is to empower
-                educational institutions and corporations with the most advanced technology, enabling them to conduct
-                online exams with confidence.
-                <br><br>
-                We are committed to delivering innovative and effective solutions that meet the unique needs of our
-                clients, while prioritizing the highest level of security, reliability, and accessibility.
-            </p>
-            <a href="#" class="mt-6 inline-block px-6 py-3 bg-blue-500 text-white text-lg font-semibold rounded-md shadow-md hover:bg-blue-600 hover:shadow-lg transition duration-300">
-                Get in Touch
-            </a>
-        </div>
-
-        <!-- Mission Image -->
-        <div class="w-full lg:w-6/12 p-8 flex justify-center items-center">
-            <img src="https://Examonline.in/wp-content/uploads/2023/03/achievement.png" alt="Mission"
-                class="rounded-lg transform transition duration-300">
-        </div>
-    </div>
-
-    <!-- Additional Features Section -->
-    <div class="mx-8 md:mx-[10%] mt-16 p-10 bg-blue-50 rounded-lg shadow-lg">
-        <h3 class="text-4xl font-bold text-blue-600 text-center">Why Choose Us?</h3>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-10">
-            <div class="p-6 bg-white rounded-lg shadow hover:shadow-lg transition duration-300">
-                <h4 class="text-2xl font-semibold text-blue-500">Advanced Technology</h4>
-                <p class="text-gray-700 mt-4">We leverage cutting-edge technologies to ensure secure and seamless online exams.</p>
-            </div>
-            <div class="p-6 bg-white rounded-lg shadow hover:shadow-lg transition duration-300">
-                <h4 class="text-2xl font-semibold text-blue-500">Global Reach</h4>
-                <p class="text-gray-700 mt-4">Our platform is designed to cater to clients from all over the world.</p>
-            </div>
-            <div class="p-6 bg-white rounded-lg shadow hover:shadow-lg transition duration-300">
-                <h4 class="text-2xl font-semibold text-blue-500">User-Friendly Interface</h4>
-                <p class="text-gray-700 mt-4">Our intuitive design ensures an effortless experience for all users.</p>
+    <!-- Meet the Team -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-12">Meet the Team</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="text-center">
+                    <img src="https://via.placeholder.com/150" alt="Team Member" class="w-24 h-24 rounded-full mx-auto mb-4">
+                    <h3 class="text-xl font-semibold">Jane Doe</h3>
+                    <p class="text-gray-600">CEO</p>
+                </div>
+                <div class="text-center">
+                    <img src="https://via.placeholder.com/150" alt="Team Member" class="w-24 h-24 rounded-full mx-auto mb-4">
+                    <h3 class="text-xl font-semibold">John Smith</h3>
+                    <p class="text-gray-600">CTO</p>
+                </div>
+                <div class="text-center">
+                    <img src="https://via.placeholder.com/150" alt="Team Member" class="w-24 h-24 rounded-full mx-auto mb-4">
+                    <h3 class="text-xl font-semibold">Emily Johnson</h3>
+                    <p class="text-gray-600">Marketing Head</p>
+                </div>
             </div>
         </div>
-    </div>
+    </section>
 
-    <!-- Footer Section -->
-    <footer class="text-center py-6 mt-16 text-gray-500 bg-gray-100">
-        <p>© 2025 Test-Track. All Rights Reserved.</p>
-    </footer>
+    <!-- Testimonials -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-8">What Our Clients Say</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="p-6 bg-white rounded-lg shadow">
+                    <p class="text-gray-600 italic">"This company has transformed the way we do business. Highly recommended!"</p>
+                    <h4 class="text-lg font-semibold mt-4">- Sarah Lee</h4>
+                </div>
+                <div class="p-6 bg-white rounded-lg shadow">
+                    <p class="text-gray-600 italic">"Innovative solutions and a professional team. Simply amazing!"</p>
+                    <h4 class="text-lg font-semibold mt-4">- Michael Brown</h4>
+                </div>
+                <div class="p-6 bg-white rounded-lg shadow">
+                    <p class="text-gray-600 italic">"Their commitment to excellence is unmatched. We couldn't be happier!"</p>
+                    <h4 class="text-lg font-semibold mt-4">- Amanda Green</h4>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <!-- Call to Action -->
+    <section class="py-16 bg-blue-500 text-white text-center">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold mb-4">Ready to Work With Us?</h2>
+            <p class="mb-8">Let’s build something amazing together.</p>
+            <a href="contact.php" class="bg-white text-blue-500 font-semibold py-3 px-6 rounded shadow-lg hover:bg-gray-100">Contact Us</a>
+        </div>
+    </section>
+
+    <?php 
+    // include_once "includes/footer.php"; ?>
 </body>
 
 </html>

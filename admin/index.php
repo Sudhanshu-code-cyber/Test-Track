@@ -1,5 +1,7 @@
 <?php
 include_once "../config/connect.php";
+$callingexams = mysqli_query($connect,"select * from tests");
+$counts = mysqli_num_rows($callingexams);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -23,7 +25,7 @@ include_once "../config/connect.php";
                 <div class="p-4 md:w-1/4 sm:w-1/2 w-full">
                     <div class="border-2 border-gray-200 px-4 flex items-center flex-col gap-1 py-6 rounded-lg">
                         <img src="https://cdn-icons-png.flaticon.com/512/4662/4662967.png" alt="" class="h-14">
-                        <h2 class="title-font font-medium text-3xl text-gray-900">30+</h2>
+                        <h2 class="title-font font-medium text-3xl text-gray-900"><?= $counts;?>+</h2>
                         <p class="leading-relaxed">Total Exams</p>
                     </div>
                 </div>

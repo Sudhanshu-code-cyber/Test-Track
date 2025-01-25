@@ -1,6 +1,6 @@
 <?php
 include_once "../config/connect.php";
-$callingSubject = $connect->query("select * from subject");
+$callingSubject = $connect->query("select * from subject ");
 $counts = mysqli_num_rows($callingSubject);
 ?>
 <!DOCTYPE html>

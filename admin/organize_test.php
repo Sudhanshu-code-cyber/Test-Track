@@ -44,7 +44,7 @@ include_once "../config/connect.php";
                             <?php
                             $callingSub = $connect->query("select * from subject");
                             while ($sub = mysqli_fetch_array($callingSub)) {
-                                echo "<option value='" . $sub['subject_id'] . "'>" . $sub['subject_name'] . "</option>";
+                                echo "<option value='" . $sub['subject_name'] . "'>" . $sub['subject_name'] . "</option>";
                             }
                             ?>
                         </select>

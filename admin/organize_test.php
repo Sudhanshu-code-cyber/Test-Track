@@ -19,15 +19,14 @@ include_once "../config/connect.php";
         </div>
         <div class="w-10/12 flex flex-col justify-center fixed top-15 right-1  p-5">
             <h1 class="text-2xl mb-2 font-semibold">Organize Test</h1>
-            <form action="#" method="POST" class="space-y-6 border border-gray-200 overflow-y-scroll h-[88vh] rounded p-5">
+            <form action="#" method="POST" enctype="multipart/form-data" class="space-y-6 border border-gray-200 overflow-y-scroll h-[88vh] rounded p-5">
                 <!-- Exam Title -->
                 <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
                     <div>
-                        <label for="examTitle" class="block text-sm font-medium text-gray-700">Exam Title</label>
+                        <label for="" class="block text-sm font-medium text-gray-700">Exam Title</label>
                         <input
                             type="text"
-                            id="examTitle"
-                            name="examTitle"
+                            name="test_title"
                             placeholder="Enter exam title"
                             class="mt-2 w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500"
                             required>
@@ -44,8 +43,8 @@ include_once "../config/connect.php";
                             <option value="" disabled selected>Select a subject</option>
                             <?php
                             $callingSub = $connect->query("select * from subject");
-                            while($sub = mysqli_fetch_array($callingSub)){
-                                echo "<option value='".$sub['subject_id']."'>".$sub['subject_name']."</option>";
+                            while ($sub = mysqli_fetch_array($callingSub)) {
+                                echo "<option value='" . $sub['subject_id'] . "'>" . $sub['subject_name'] . "</option>";
                             }
                             ?>
                         </select>
@@ -55,20 +54,20 @@ include_once "../config/connect.php";
                 <!-- Date and Time -->
                 <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
                     <div>
-                        <label for="examDate" class="block text-sm font-medium text-gray-700">Exam Date</label>
+                        <label for="date" class="block text-sm font-medium text-gray-700">Exam Date</label>
                         <input
                             type="date"
-                            id="examDate"
-                            name="examDate"
+                            id="date"
+                            name="date"
                             class="mt-2 w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500"
                             required>
                     </div>
                     <div>
-                        <label for="startTime" class="block text-sm font-medium text-gray-700">Start Time</label>
+                        <label for="time" class="block text-sm font-medium text-gray-700">Start Time</label>
                         <input
                             type="time"
-                            id="startTime"
-                            name="startTime"
+                            id="time"
+                            name="time"
                             class="mt-2 w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500"
                             required>
                     </div>
@@ -87,11 +86,10 @@ include_once "../config/connect.php";
                             required>
                     </div>
                     <div>
-                        <label for="totalMarks" class="block text-sm font-medium text-gray-700">Total Marks</label>
+                        <label for="" class="block text-sm font-medium text-gray-700">Total Marks</label>
                         <input
                             type="number"
-                            id="totalMarks"
-                            name="totalMarks"
+                            name="total_marks"
                             placeholder="Enter total marks"
                             class="mt-2 w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500"
                             required>
@@ -101,33 +99,42 @@ include_once "../config/connect.php";
                 <!-- Passing Marks and Negative Marking -->
                 <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
                     <div>
-                        <label for="passingMarks" class="block text-sm font-medium text-gray-700">Passing Marks</label>
+                        <label for="" class="block text-sm font-medium text-gray-700">Passing Marks</label>
                         <input
                             type="number"
-                            id="passingMarks"
-                            name="passingMarks"
+                            name="passing_marks"
                             placeholder="Enter passing marks"
                             class="mt-2 w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500"
                             required>
                     </div>
-                    <div class="flex items-center gap-2 mt-6">
-                        <input
-                            type="checkbox"
-                            id="negativeMarking"
-                            name="negativeMarking"
-                            class="h-5 w-5 text-blue-600 rounded">
-                        <label for="negativeMarking" class="text-sm font-medium text-gray-700">Enable Negative Marking</label>
+                    <div>
+                        <label for="" class="block text-sm font-medium text-gray-700">Upload Template</label>
+                        <input 
+                            type="file" 
+                            name="template" 
+                            class="mt-2 w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500" 
+                            required>
                     </div>
+
                 </div>
 
                 <!-- Randomize Questions -->
-                <div class="flex items-center gap-2">
-                    <input
-                        type="checkbox"
-                        id="randomizeQuestions"
-                        name="randomizeQuestions"
-                        class="h-5 w-5 text-blue-600 rounded">
-                    <label for="randomizeQuestions" class="text-sm font-medium text-gray-700">Randomize Questions</label>
+                <div class="flex items-center gap-[35%] ">
+                    <div class="flex items-center gap-2">
+                        <input
+                            type="checkbox"
+                            id="randomizeQuestions"
+                            name="randomizeQuestions"
+                            class="h-5 w-5 text-blue-600 rounded">
+                        <label for="randomizeQuestions" class="text-sm font-medium text-gray-700">Randomize Questions</label>
+                    </div>
+                    <div class="flex items-center  gap-2">
+                        <input
+                            type="checkbox"
+                            name="negativeMarking"
+                            class="h-5 w-5 text-blue-600 rounded">
+                        <label for="" class="text-sm font-medium text-gray-700">Enable Negative Marking</label>
+                    </div>
                 </div>
 
                 <!-- Instructions -->
@@ -145,14 +152,42 @@ include_once "../config/connect.php";
                 <div class="mb-15">
                     <button
                         type="submit"
+                        name="save_exam"
                         class="w-full bg-blue-600 text-white py-3 rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500">
                         Save Exam
                     </button>
                 </div>
-
             </form>
         </div>
-
 </body>
 
 </html>
+<?php
+if(isset($_POST['save_exam'])){
+    $test_title = $_POST['test_title'];
+    $subject = $_POST['subject'];
+    $date = $_POST['date'];
+    $time =  $_POST['time'];
+    $duration = $_POST['duration'];
+    $total_marks  = $_POST['total_marks'];
+    $passing_marks = $_POST['passing_marks'];
+    $randomizeQuestions = $_POST['randomizeQuestions'];
+    $negativeMarking = $_POST['negativeMarking'];
+    $instructions = $_POST['instructions'];
+
+     // image work
+     $template = $_FILES['template']['name'];
+     $tmp_image = $_FILES['template']['tmp_name'];
+ 
+     move_uploaded_file($tmp_image,"../image/template/$template");
+
+     $query = $connect->query("insert into tests (test_title, subject, date, time, duration, total_marks, passing_marks, template, negativeMarking, randomizeQuestions, instructions)
+     values('$test_title','$subject','$date','$time','$duration','$total_marks','$passing_marks','$template','$negativeMarking','$randomizeQuestions','$instructions')");
+
+     if($query){
+        msg("Exam Added Successfully");
+     }
+     else{
+        msg("Something Went Wrong");
+     }
+}

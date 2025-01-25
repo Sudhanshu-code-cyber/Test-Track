@@ -9,7 +9,7 @@
 </head>
 
 <body class="">
-    <?php  include_once "includes/header.php";?>
+    <?php include_once "includes/header.php"; ?>
     <!-- Header Section -->
     <div class="flex flex-wrap lg:flex-nowrap">
         <!-- Text Section -->
@@ -17,11 +17,11 @@
             <div class="flex flex-col h-auto lg:h-[80vh] justify-center p-10 lg:p-16">
                 <h2 class="text-5xl font-bold text-blue-600 leading-tight">About Us</h2>
                 <p class="text-gray-700 mt-6 text-lg leading-relaxed">
-                    Welcome to ExamOnline, the innovative remote proctoring solution that’s transforming the way online
+                    Welcome to Test-Track, the innovative remote proctoring solution that’s transforming the way online
                     exams are conducted. Our mission is to provide the most secure, efficient, and cost-effective
                     solution to educational institutions and corporations across the world.
                 </p>
-                <a href="#" class="mt-8 inline-block px-6 py-3 bg-pink-500 text-white text-lg font-semibold rounded-md shadow-md hover:bg-pink-600 hover:shadow-lg transition duration-300">
+                <a href="#" class="mt-8 inline-block px-6 py-3 bg-[#3F72AF] text-white text-lg font-semibold rounded-md shadow-md hover:bg-[#112D4E] hover:shadow-lg transition duration-300">
                     Learn More
                 </a>
             </div>
@@ -31,7 +31,7 @@
         <div class="w-full lg:w-6/12 relative ">
             <div class="p-10 flex justify-center items-center h-full">
                 <img src="https://examonline.in/wp-content/uploads/2023/03/about-us-1536x1112.png" alt="About Us"
-                    class="rounded-lg  transform hover:scale-105 transition duration-300">
+                    class="rounded-lg transition duration-300">
             </div>
         </div>
     </div>
@@ -42,7 +42,7 @@
             <h3 class="text-4xl font-bold text-pink-600">Our Story</h3>
             <hr class="mt-4 border-2 border-pink-600 w-24 mx-auto">
             <p class="text-gray-800 mt-6 text-lg leading-relaxed">
-                Founded in 2009, ExamOnline was created with the vision of transforming the traditional approach to exam
+                Founded in 2009, Test-Track was created with the vision of transforming the traditional approach to exam
                 administration. Our founders recognized the need for a secure, reliable, and easy-to-use remote
                 proctoring solution, and began developing a product that would meet the evolving demands of modern-day
                 exams.
@@ -59,7 +59,7 @@
         <div class="w-full lg:w-6/12 p-8">
             <h3 class="text-4xl font-bold text-blue-600">Our Mission</h3>
             <p class="text-gray-700 mt-6 text-lg leading-relaxed">
-                At ExamOnline, we believe that remote proctoring solutions can level the playing field and provide equal
+                At Test-Track, we believe that remote proctoring solutions can level the playing field and provide equal
                 opportunities for students and job applicants, regardless of their location. Our mission is to empower
                 educational institutions and corporations with the most advanced technology, enabling them to conduct
                 online exams with confidence.
@@ -74,8 +74,8 @@
 
         <!-- Mission Image -->
         <div class="w-full lg:w-6/12 p-8 flex justify-center items-center">
-            <img src="https://examonline.in/wp-content/uploads/2023/03/achievement.png" alt="Mission"
-                class="rounded-lg shadow-lg transform hover:scale-105 transition duration-300">
+            <img src="https://Examonline.in/wp-content/uploads/2023/03/achievement.png" alt="Mission"
+                class="rounded-lg transform transition duration-300">
         </div>
     </div>
 
@@ -100,7 +100,7 @@
 
     <!-- Footer Section -->
     <footer class="text-center py-6 mt-16 text-gray-500 bg-gray-100">
-        <p>© 2025 ExamOnline. All Rights Reserved.</p>
+        <p>© 2025 Test-Track. All Rights Reserved.</p>
     </footer>
 
 </body>

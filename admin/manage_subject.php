@@ -1,5 +1,7 @@
 <?php
-// include_once "../config/connect.php";
+include_once "../config/connect.php";
+$callingSubject = $connect->query("select * from subject");
+$counts = mysqli_num_rows($callingSubject);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -18,13 +20,34 @@
             <?php include_once "includes/sidebar.php"; ?>
         </div>
         <div class="w-10/12 flex flex-col justify-center fixed top-15 right-1  p-5">
-            <h1 class="text-2xl mb-2 font-semibold">Manage Subject (15)</h1>
+            <h1 class="text-2xl mb- font-semibold ml-5">Manage Subject (<?= $counts;?>)</h1>
             <div class="flex gap-2">
                 <div class="w-9/12">
-                    <!-- show subject table -->
+                    <div class="flex p-4">
+                        <table class="w-full shadow">
+                            <tr>
+                                <th class="border-gray-200 border px-4 py-2">Id</th>
+                                <th class="border-gray-200 border px-4 py-2">Subject</th>
+                                <th class="border-gray-200 border px-4 py-2">Subject Description</th>
+                                <th class="border-gray-200 border px-4 py-2">Action</th>
+                            </tr>
+                            <?php 
+                            while ($row = mysqli_fetch_array($callingSubject)){
+                            ?>
+                                 <tr>
+                                    <td class="border border-gray-200 px-4 py-2 text-center"><?= $row['subject_id'];?></td>
+                                    <td class="border border-gray-200 px-4 py-2 text-center"><?= $row['subject_name'];?></td>
+                                    <td class="border border-gray-200 px-4 py-2 text-center"><?= $row['subject_description'];?></td>
+                                    <td class="border border-gray-200 px-4 py-2 flex justify-center">
+                                        <a href="?delete_subject=<?= $row['subject_id'];?>" class="items-center"><img src="https://www.svgrepo.com/show/21045/delete-button.svg" alt="" class="h-8"> </a>
+                                    </td>
+                                 </tr>
+                            <?php }?>
+                        </table>
+                    </div>
                 </div>
                 <div class="w-3/12">
-                    <form action="save_subject.php" method="POST" class="space-y-6 border border-gray-200 p-5 rounded shadow-md">
+                    <form action="manage_subject.php" method="POST" class="space-y-6 border border-gray-200 p-5 rounded shadow-md">
                     <h1 class="text-lg font-semibold">Insert Subject</h1>    
                     <!-- Subject Name -->
                         <div>
@@ -54,11 +77,30 @@
                         <div>
                             <button
                                 type="submit"
+                                name="save_subject"
                                 class="w-full bg-blue-600 text-white py-3 rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500">
                                 Save Subject
                             </button>
                         </div>
                     </form>
+                    <?php
+                        if(isset($_POST['save_subject'])){
+                            $subject_name = $_POST['subject_name'];
+                            $subject_description = $_POST['subject_description'];
+
+                            $query = $connect->query("insert into subject(subject_name, subject_description)
+                            value('$subject_name','$subject_description')");
+
+                            if($query){
+                                msg("Subject inserted successfully");
+                            }
+                            else{
+                                msg("Subject not inserted successfully");
+                            }
+                            
+                            redirect("manage_subject.php");
+                        }
+                    ?>
                 </div>
             </div>
         </div>
@@ -66,3 +108,15 @@
 </body>
 
 </html>
+<?php
+if(isset($_GET['delete_subject'])){
+    $id = $_GET['delete_subject'];
+
+    $query = $connect->query("delete from subject where subject_id='$id'");
+    if($query){
+        redirect("manage_subject.php");
+    }
+    else{
+        msg("something went wrong");
+    }
+}

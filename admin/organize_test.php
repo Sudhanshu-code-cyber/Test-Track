@@ -1,5 +1,5 @@
 <?php
-// include_once "../config/connect.php";
+include_once "../config/connect.php";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -42,10 +42,12 @@
                             class="mt-2 w-full px-4 py-2 border border-gray-300 bg-white rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500"
                             required>
                             <option value="" disabled selected>Select a subject</option>
-                            <option value="Mathematics">Mathematics</option>
-                            <option value="Physics">Physics</option>
-                            <option value="Chemistry">Chemistry</option>
-                            <option value="Biology">Biology</option>
+                            <?php
+                            $callingSub = $connect->query("select * from subject");
+                            while($sub = mysqli_fetch_array($callingSub)){
+                                echo "<option value='".$sub['subject_id']."'>".$sub['subject_name']."</option>";
+                            }
+                            ?>
                         </select>
                     </div>
                 </div>

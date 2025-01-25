@@ -14,11 +14,11 @@
 <body>
     <?php include_once "includes/admin_header.php"; ?>
     <div class="flex">
-        <div class="w-2/12 h-[88vh] flex flex-col gap-3 text-xl font-semibold text-gray-700 bg-[#FFE6E6]">
+        <div class="w-2/12 h-[88vh] flex flex-col gap-3 text-xl fixed top-15 font-semibold text-gray-700 bg-[#FFE6E6]">
            <?php include_once "includes/sidebar.php";?>
 
         </div>
-        <div class="w-10/12 flex justify-center mt-[6%]">
+        <div class="w-10/12 flex justify-center fixed top-15 right-1 mt-[6%]">
             <div class="flex flex-wrap w-full -m-4 text-center">
                 <div class="p-4 md:w-1/4 sm:w-1/2 w-full">
                     <div class="border-2 border-gray-200 px-4 flex items-center flex-col gap-1 py-6 rounded-lg">

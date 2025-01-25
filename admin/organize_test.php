@@ -14,13 +14,12 @@
 <body>
     <?php include_once "includes/admin_header.php"; ?>
     <div class="flex">
-        <div class="w-2/12 h-[88vh] flex flex-col gap-3 text-xl font-semibold text-gray-700 bg-[#FFE6E6]">
+        <div class="w-2/12 h-[88vh] flex flex-col gap-3 fixed top-15 text-xl font-semibold text-gray-700 bg-[#FFE6E6]">
             <?php include_once "includes/sidebar.php"; ?>
-
         </div>
-        <div class="w-10/12 flex justify-center mt-[6%]">
-            <form action="#" method="POST" class="space-y-6 border p-5">
-
+        <div class="w-10/12 flex flex-col justify-center fixed top-15 right-1  p-5">
+            <h1 class="text-2xl mb-2 font-semibold">Organize Test</h1>
+            <form action="#" method="POST" class="space-y-6 border border-gray-200 overflow-y-scroll h-[88vh] rounded p-5">
                 <!-- Exam Title -->
                 <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
                     <div>
@@ -141,7 +140,7 @@
                 </div>
 
                 <!-- Submit Button -->
-                <div>
+                <div class="mb-15">
                     <button
                         type="submit"
                         class="w-full bg-blue-600 text-white py-3 rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500">

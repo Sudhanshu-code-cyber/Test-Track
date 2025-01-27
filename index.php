@@ -87,7 +87,7 @@
                 <img src="image/Create-Online-Tests.png" alt="Create Online Test"
                     class="h-16 w-16 mb-4 zoom-in transition-transform transform hover:scale-110">
                 <h1 class="text-lg hover:text-blue-500 font-semibold text-center text-gray-800">Create Online Test</h1>
-                <a href="#" class="text-sm font-medium text-blue-600 hover:text-blue-800 mt-4">View details</a>
+                <a href="create_test.php" class="text-sm font-medium text-blue-600 hover:text-blue-800 mt-4">View details</a>
             </div>
 
             <div
@@ -279,55 +279,7 @@
 
         </div>
     </div>
-    <!--why choose online exam -->
-    <div class="flex flex-1 flex-col py-5 justify-center bg-[#F9F7F7] items-center">
-        <h1 class="text-4xl">Why Choose ExamOnline</h1>
-        <div class="border mt-4 border-b-2 border-gray-900 w-[40%] "></div>
-  
-        </div>
-
-        <div class="flex flex-1 bg-[#F9F7F7]  px-[10%]">
-
-            <div class="flex flex-1 flex-col gap-10">
-
-            <div class="flex gap-8">
-                <img src="image/important.svg" class="mb-10 w-8" alt="">
-            <p class="">Eliminate Physical Proctor: Embrace auto-proctor tests with <br> 
-            artificial intelligence (AI) capabilities that use face recognition <br>
-             and digital IDs to conduct tests in secure environments</p>
-            </div>
-            
-             <div class="flex gap-8">
-             <img src="image/important.svg" class="mb-10 w-8" alt="">
-
-             <p>
-             Utilize Advanced Reporting: Get reports for exams, including <br>
-              scorecards, computational analysis, and detailed analytics on all <br>
-               the candidates blazing fast.
-             </p>
-             </div>
-                <div class="flex gap-8">
-                <img src="image/important.svg" class="mb-10 w-8" alt="">
-
-                
-             <p>
-             Secure Your Data: Protect your data and ensure your intellectual <br>
-              property is never compromised through data encryption and <br>
-               secure hosting.
-             </p>
-
-             </div>
-
-            </div>
-            <div class="flex flex-1">
-                 <img src="image/examonline.png" alt="">
-            </div>
-
-        </div>
-
-    
-
-<?php include_once 'footer.php'; ?>
+    <?php include_once 'includes/footer.php'; ?>
 
 
 

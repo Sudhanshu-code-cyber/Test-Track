@@ -21,7 +21,7 @@
         global $connect;
         $query = $connect->query("select * from users where email='$email'");
 
-        $userData = $query->fetch_assoc();
-        return $userData;
+        $userData = $query->fetch_array();
+        return $userData ? $userData : [];
     }
 ?>

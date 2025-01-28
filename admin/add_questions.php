@@ -1,6 +1,11 @@
 <?php
 include_once "../config/connect.php";
 include_once "includes/redirectIfNotAuth.php";
+$callingQuestions = $connect->query("select * from questions join tests on questions.exam_name=tests.test_title");
+$question = mysqli_fetch_array($callingQuestions);
+if($question['exam_name'] == $question['test_title']){
+$counts = mysqli_num_rows($callingQuestions);
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -20,7 +25,7 @@ include_once "includes/redirectIfNotAuth.php";
 
         </div>
         <div class="w-10/12 flex flex-col justify-center fixed top-15 right-1  p-5">
-            <h1 class="text-2xl mb-2 font-semibold">Adding Questions</h1>
+            <h1 class="text-2xl mb-2 font-semibold">Adding Questions (<?= $counts;?>)</h1>
             <form action="" method="POST" class="space-y-6 border border-gray-200 overflow-y-scroll h-[88vh] p-5 rounded shadow-md">
                 <!-- Select Exam -->
                 <div>
@@ -145,7 +150,7 @@ if(isset($_POST['save_question'])){
 
     if($query){
         msg("question Inserted Successfully");
-        redirect("index.php");
+        redirect("add_questions.php");
     }
     else{
         msg("question not Inserted");

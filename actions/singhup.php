@@ -14,5 +14,8 @@ if(isset($_POST['singhup'])){
     if($query){
         redirect("../login.php");
     }
+    else{
+        msg("something went wrong");
+    }
 }
 ?>

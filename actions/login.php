@@ -5,12 +5,15 @@ if(isset($_POST['login'])){
     $password = md5($_POST['password']);
 
     $query = mysqli_query($connect,"select * from users where email='$email' and password='$password'");
+    $count = mysqli_num_rows($query);
 
-    if($query){
+    if($count){
+        $_SESSION['user'] = $email;
         redirect("../index.php");
     }
     else{
         msg('invalid email aur password');
+        redirect("../login.php");
     }
 }
 

@@ -48,6 +48,7 @@ include_once "config/connect.php";
                             placeholder="First Name"
                             class="w-1/2 px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"
                             required />
+                        
 
                         <input
                             type="text"
@@ -126,7 +127,47 @@ include_once "config/connect.php";
                         $email = $_POST['email'];
                         $password = md5($_POST['password']);
 
-                        $query = mysqli_query($connect,"insert into users (firstname, lastname, gender ,contact ,email ,password) values('$firstname','$lastname','$gender','$contact','$email','$password')");
+                        //validatins
+                        if(!preg_match("/^[A-za-z ]+$/",$firstname)){
+                        echo "<h2 class='text-red-500 text-center '>invalid firstname</h2>";
+                        };
+
+
+                        if (!preg_match("/^[A-za-z ]+$/", $lastname)) {
+                            echo "invalid lastname";
+                        }
+                        if (!preg_match("/^[6-9][0-9]{9}/", $contact)) {
+                            echo "invalid contact";
+                        }
+
+                        if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+                            echo "invalid email";
+                        }
+                        if (strlen($password) < 6) {
+                            echo "invalid password";
+                        }
+                        if (empty($password)) {
+                            echo "please enter password";
+
+                            $email_check = mysqli_query($connect, "select * from users where email='$email'");
+                            if (mysqli_num_rows($email_check) > 0) {
+                                echo "email already exist";
+                            } else {
+                                $query = mysqli_query($connect, "insert into users (firstname, lastname, gender ,contact ,email ,password) values('$firstname','$lastname','$gender','$contact','$email','$password')");
+                                if ($query) {
+                                    echo "Registration Sucessfully";
+                                } else {
+                                    echo "Somethin went wrong";
+                                }
+                            }
+                        } else {
+                        }
+
+                        // if(!preg_match("/^[A-z ]+$/", $firstname)){
+                        //      echo
+                        //     "<div class='flex flex-1 justify-center items-center bg-blue-400 py-1 rounded-md'>Name is Invaild</div>";
+                        // }
+
                         // if (empty($firstname)) {
                         // } else if (!preg_match("/^[A-z ]+$/", $firstname)) {
                         //     echo
@@ -145,14 +186,17 @@ include_once "config/connect.php";
                         // } else if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
                         //     echo "<div class='flex flex-1 justify-center items-center bg-blue-400 py-1flex flex-1 justify-center items-center  rounded-md   '>Invalid email</div>";
                         // }
-                        if($query){
-                            redirect("login.php");
 
-                        }
-                        else{
-                                msg('something went wrong');
-                                redirect("../singup.php");
-                        }
+                        // $query = mysqli_query($connect, "insert into users (firstname, lastname, gender ,contact ,email ,password) values('$firstname','$lastname','$gender','$contact','$email','$password')");
+
+                        // if($query){
+                        //     redirect("login.php");
+
+                        // }
+                        // else{
+                        //         msg('something went wrong');
+                        //         redirect("../singup.php");
+                        // }
                     }
                     ?>
 

@@ -185,8 +185,8 @@ if(isset($_POST['save_exam'])){
      values('$test_title','$subject','$date','$time','$duration','$total_marks','$passing_marks','$template','$negativeMarking','$randomizeQuestions','$instructions')");
 
      if($query){
-        msg("Exam Added Successfully");
-     }
+        redirect("test_added.php");
+    }
      else{
         msg("Something Went Wrong");
      }

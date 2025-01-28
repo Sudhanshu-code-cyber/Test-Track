@@ -1,5 +1,6 @@
 <?php
 include_once "../config/connect.php";
+include_once "includes/redirectIfNotAuth.php";
 $callingexams = mysqli_query($connect,"select * from tests");
 $counts = mysqli_num_rows($callingexams);
 ?>

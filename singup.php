@@ -1,3 +1,6 @@
+<?php
+include_once "config/connect.php";
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -35,7 +38,7 @@
                 </div>
 
                 <!-- Form -->
-                <form action="actions/singhup.php" method="POST" class="space-y-6">
+                <form action="" method="POST" class="space-y-6">
                     <!-- Name Input -->
                     <div class="flex space-x-3">
                         <input
@@ -45,6 +48,7 @@
                             placeholder="First Name"
                             class="w-1/2 px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"
                             required />
+
                         <input
                             type="text"
                             id="last_name"
@@ -111,6 +115,50 @@
                         class="w-full bg-green-600 text-white font-bold py-3 rounded-lg hover:bg-teal-700 transition-transform transform hover:scale-105">
                         Sign Up
                     </button>
+                    <?php
+
+
+                    if (isset($_POST['singhup'])) {
+                        $firstname = $_POST['firstname'];
+                        $lastname = $_POST['lastname'];
+                        $gender = $_POST['gender'];
+                        $contact = $_POST['contact'];
+                        $email = $_POST['email'];
+                        $password = md5($_POST['password']);
+
+                        $query = mysqli_query($connect,"insert into users (firstname, lastname, gender ,contact ,email ,password) values('$firstname','$lastname','$gender','$contact','$email','$password')");
+                        // if (empty($firstname)) {
+                        // } else if (!preg_match("/^[A-z ]+$/", $firstname)) {
+                        //     echo
+                        //     "<div class='flex flex-1 justify-center items-center bg-blue-400 py-1 rounded-md'>Name is Invaild</div>";
+                        // }
+
+
+                        // if (empty($contact)) {
+                        //     echo "<div class='flex flex-1 justify-center items-center bg-blue-400 py-1 rounded-md   '>Contact is required</div>";
+                        // } else if (!preg_match("/^[0-9]{10}$/", $contact)) {
+                        //     echo
+                        //     "<div class='flex flex-1 justify-center items-center bg-blue-400 py-1 rounded-md'>Number is Invaild</div>";
+                        // }
+                        // if (empty($email)) {
+                        //     echo "<div class='flex flex-1 justify-center items-center bg-blue-400 py-1flex flex-1 justify-center items-center  rounded-md   '>Email is required</div>";
+                        // } else if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+                        //     echo "<div class='flex flex-1 justify-center items-center bg-blue-400 py-1flex flex-1 justify-center items-center  rounded-md   '>Invalid email</div>";
+                        // }
+                        if($query){
+                            redirect("login.php");
+
+                        }
+                        else{
+                                msg('something went wrong');
+                                redirect("../singup.php");
+                        }
+                    }
+                    ?>
+
+
+
+
                 </form>
 
                 <!-- Footer -->

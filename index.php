@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 
-    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+ <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
     <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.css" rel="stylesheet" />
 
 
@@ -82,27 +82,29 @@
             and/or Organization.</p>
 
         <div class="grid grid-cols-5 gap-6 mt-5">
-            <div
+            <a href="create_test.php"
                 class="flex flex-col items-center justify-center  gap-3 px-5 py-4 h-50 border-r border-gray-200 hover:text-bule-400 cursor-pointer">
+
                 <img src="image/Create-Online-Tests.png" alt="Create Online Test"
                     class="h-16 w-16 mb-4 zoom-in transition-transform transform hover:scale-110">
                 <h1 class="text-lg hover:text-blue-500 font-semibold text-center text-gray-800">Create Online Test</h1>
-                <a href="create_test.php" class="text-sm font-medium text-blue-600 hover:text-blue-800 mt-4">View details</a>
-            </div>
+                <p href="" class="text-sm font-medium text-blue-600 hover:text-blue-800 mt-4">View details</p>
+                
+    </a>
 
-            <div
+            <a href="includes/take_test.php"
                 class="flex flex-col items-center justify-center gap-3 px-5 py-4 h-50 border-r border-gray-200 hover:text-bule-400 cursor-pointer">
                 <img src="image/Statical-Report-of-Your-Test.png" alt="Create Online Test"
                     class="h-16 w-16 mb-4 transition-transform transform hover:scale-110">
-                <h1 class="text-lg font-semibold text-center text-gray-800">Statical Report of Your Test</h1>
-                <a href="#" class="text-sm font-medium text-blue-600 hover:text-blue-800 mt-4">View details</a>
-            </div>
+                <h1 class="text-lg font-semibold text-center text-gray-800">Take Test Now</h1>
+                <p  class="text-sm font-medium text-blue-600 hover:text-blue-800 mt-4">View details</p>
+    </a>
 
             <div
                 class="flex flex-col items-center justify-center gap-3 px-5 py-4 h-50 border-r border-gray-200 hover:text-bule-400 cursor-pointer">
                 <img src="image/Organize-Private-Test.png" alt="Create Online Test"
                     class="h-16 w-16 mb-4 transition-transform transform hover:scale-110">
-                <h1 class="text-lg font-semibold text-center text-gray-800">Organize Private Test</h1>
+                <h1 class="text-lg font-semibold text-center text-gray-800">Shedule Your Test</h1>
                 <a href="#" class="text-sm font-medium text-blue-600 hover:text-blue-800 mt-4">View details</a>
             </div>
 
@@ -110,7 +112,7 @@
                 class="flex flex-col items-center justify-center gap-3 px-5 py-4 h-50 border-r border-gray-200 hover:text-bule-400 cursor-pointer">
                 <img src="image/Attempt-Online-Test.png" alt="Create Online Test"
                     class="h-16 w-16 mb-4 transition-transform transform hover:scale-110">
-                <h1 class="text-lg font-semibold text-center text-gray-800">Attempt Online Test</h1>
+                <h1 class="text-lg font-semibold text-center text-gray-800">Our Upcoming Test</h1>
                 <a href="#" class="text-sm font-medium text-blue-600 hover:text-blue-800 mt-4">View details</a>
             </div>
 

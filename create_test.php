@@ -1,3 +1,5 @@
+<?php include_once "config/connect.php"; ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -35,7 +37,7 @@
                             class="w-full px-4 py-2 mt-2 border border-gray-300 rounded-lg" required>
                     </div>
                     <div>
-                        <label for="test_subject" class="block text-lg font-semibold text-gray-700">Exam Time</label>
+                        <label for="test_subject" class="block text-lg font-semibold text-gray-700">Exam</label>
                         <input type="time" id="test_subject" name="test_subject"
                             class="w-full px-4 py-2 mt-2 border border-gray-300 rounded-lg" required>
                     </div>
@@ -69,47 +71,11 @@
 
 
 
-            <!-- Questions and Answers -->
-            <div id="questionsContainer">
-            <h1 class="bg-gray-500 text-white px-3 py-2 w-full rounded text-2xl font-semibold">Add Questions</h1>
-            <div class="mb-6 question">
-                    <label for="question_1" class="block text-lg font-semibold text-gray-700">Question 1</label>
-                    <input type="text" name="questions[]"
-                        class="w-full px-4 py-2 mt-2 border border-gray-300 rounded-lg" required>
-
-                    <div class="mt-4">
-                        <label class="block text-lg font-semibold text-gray-700">Answer Choices</label>
-                        <input type="text" name="answers[1][]"
-                            class="w-full px-4 py-2 mt-2 border border-gray-300 rounded-lg"
-                            placeholder="Answer Choice 1" required>
-                        <input type="text" name="answers[1][]"
-                            class="w-full px-4 py-2 mt-2 border border-gray-300 rounded-lg"
-                            placeholder="Answer Choice 2" required>
-                        <input type="text" name="answers[1][]"
-                            class="w-full px-4 py-2 mt-2 border border-gray-300 rounded-lg"
-                            placeholder="Answer Choice 3" required>
-                        <input type="text" name="answers[1][]"
-                            class="w-full px-4 py-2 mt-2 border border-gray-300 rounded-lg"
-                            placeholder="Answer Choice 4" required>
-                    </div>
-
-                    <div class="mt-4">
-                        <label class="block text-lg font-semibold text-gray-700">Correct Answers (comma-separated, e.g.,
-                            0,2 for choices 1 and 3)</label>
-                        <input type="text" name="correct_answers[1]"
-                            class="w-full px-4 py-2 mt-2 border border-gray-300 rounded-lg" required>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Add More Question Button -->
-            <button type="button" id="addQuestion"
-                class="mt-4 bg-blue-500 text-white px-6 py-2 rounded-lg hover:bg-blue-600">Add More Questions</button>
-
+           
             <!-- Submit Button -->
             <div class="mt-6">
-                <button type="submit" class="bg-green-500 text-white px-6 py-2 rounded-lg hover:bg-green-600">Create
-                    Test</button>
+                <a href="addquestion.php" type="submit" class="bg-green-500 text-white px-6 py-2 rounded-lg hover:bg-green-600">Create
+                    Test</a>
             </div>
         </form>
     </div>

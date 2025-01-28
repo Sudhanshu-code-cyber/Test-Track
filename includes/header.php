@@ -1,16 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-</head>
-<body>
-<nav class="flex items-center fixed top-0 left-0 w-full  shadow-lg z-50 justify-between  bg-white border-gray-200 dark:bg-gray-900 dark:border-gray-700">
+<?php
+if (isset($_SESSION['user'])) {
+  $user = getUser();
+}
+?>
+<nav
+  class="flex items-center fixed top-0 left-0 w-full  shadow-lg z-50 justify-between  bg-white border-gray-200 dark:bg-gray-900 dark:border-gray-700">
   <div class="max-w-screen-xl flex flex-wrap items-center justify-between  w-full mx-auto p-4">
     <a href="index.php" class="flex items-center space-x-3 rtl:space-x-reverse">
-   <!--   <img src="https://flowbite.com/docs/images/logo.svg" class="h-8" alt="Flowbite Logo" /> -->
+      <!--   <img src="https://flowbite.com/docs/images/logo.svg" class="h-8" alt="Flowbite Logo" /> -->
       <span class="self-center text-3xl font-semibold whitespace-nowrap dark:text-white">Test Track</span>
     </a>
     <button data-collapse-toggle="navbar-dropdown" type="button"
@@ -43,8 +40,8 @@
             class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow-sm w-44 dark:bg-gray-700 dark:divide-gray-600">
             <ul class="py-2 text-sm text-gray-700 dark:text-gray-400" aria-labelledby="dropdownLargeButton">
               <li>
-                <a href="#"
-                  class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">My Exam</a>
+                <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">My
+                  Exam</a>
               </li>
               <li>
                 <a href="#"
@@ -52,10 +49,10 @@
               </li>
               <li>
                 <a href="#"
-                  class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Hels</a>
+                  class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Helps</a>
               </li>
             </ul>
-            
+
           </div>
         </li>
         <li>
@@ -72,7 +69,8 @@
             <ul class="py-2 text-sm text-gray-700 dark:text-gray-400" aria-labelledby="dropdownLargeButton">
               <li>
                 <a href="#"
-                  class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Create Exam </a>
+                  class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Create Exam
+                </a>
               </li>
               <li>
                 <a href="#"
@@ -83,30 +81,66 @@
                   class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Students</a>
               </li>
             </ul>
-         
+
           </div>
         </li>
 
-       
+
 
 
         <li>
-          <a href="about.php"
-            class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent
+          <a href="about.php" class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent
              md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500
               dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">About </a>
         </li>
         <li>
-          <a href="contact.php"
-            class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Contact Us</a>
+          <a href="includes/contact.php"
+            class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Contact
+            Us</a>
         </li>
-        <li>
-          <a href="#"
-            class="px-4 py-2 border bg-[#3F72AF] text-white rounded hover:bg-[#112D4E]">Login</a>
-        </li>
+        <?php
+        if (isset($_SESSION['user'])):
+
+          ?>
+
+          <img id="avatarButton" type="button" data-dropdown-toggle="userDropdown" data-dropdown-placement="bottom-start"
+            class="w-10 h-10 rounded-full cursor-pointer" src="/docs/images/people/profile-picture-5.jpg"
+            alt="User dropdown">
+
+          <!-- Dropdown menu -->
+          <div id="userDropdown"
+            class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow-sm w-44 dark:bg-gray-700 dark:divide-gray-600">
+            <div class="px-4 py-3 text-sm text-gray-900 dark:text-white">
+              <div><?=$user['firstname'];?></div>
+              <div class="font-medium truncate"><?=$user['email'];?></div>
+            </div>
+            <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="avatarButton">
+              <li>
+                <a href="#"
+                  class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Dashboard</a>
+              </li>
+              <li>
+                <a href="#"
+                  class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Settings</a>
+              </li>
+              <li>
+                <a href="#"
+                  class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Earnings</a>
+              </li>
+            </ul>
+            <div class="py-1">
+              <a href="logout.php"
+                class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Sign
+                out</a>
+            </div>
+          </div>
+
+        <?php else: ?>
+          <li>
+            <a href="login.php" class="px-4 py-2 border bg-[#3F72AF] text-white rounded hover:bg-[#112D4E]">Login</a>
+          </li>
+        <?php endif; ?>
       </ul>
     </div>
   </div>
 </nav>
-</body>
-</html>

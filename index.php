@@ -1,4 +1,8 @@
-<?php include_once "config/connect.php"; ?>
+<?php include_once "config/connect.php";
+
+redirectIfNotAuth();
+
+?>
 
 <!DOCTYPE html>
 <html lang="en">

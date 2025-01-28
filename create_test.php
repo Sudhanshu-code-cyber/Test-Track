@@ -30,6 +30,16 @@
                             class="w-full px-4 py-2 mt-2 border border-gray-300 rounded-lg" required>
                     </div>
                     <div>
+                        <label for="" class="block text-lg font-semibold text-gray-700">Exam Date</label>
+                        <input type="date" id="test_subject" name="test_subject"
+                            class="w-full px-4 py-2 mt-2 border border-gray-300 rounded-lg" required>
+                    </div>
+                    <div>
+                        <label for="test_subject" class="block text-lg font-semibold text-gray-700">Exam Time</label>
+                        <input type="time" id="test_subject" name="test_subject"
+                            class="w-full px-4 py-2 mt-2 border border-gray-300 rounded-lg" required>
+                    </div>
+                    <div>
                         <label for="test_duration" class="block text-lg font-semibold text-gray-700">Test Duration</label>
                         <input type="number" id="test_duration" name="test_duration"
                             class="w-full px-4 py-2 mt-2 border border-gray-300 rounded-lg" required>

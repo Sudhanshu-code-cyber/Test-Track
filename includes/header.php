@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
 <nav class="flex items-center fixed top-0 left-0 w-full  shadow-lg z-50 justify-between  bg-white border-gray-200 dark:bg-gray-900 dark:border-gray-700">

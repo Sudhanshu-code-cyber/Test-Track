@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 
- <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+ <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.css" rel="stylesheet" />
 
 
@@ -143,8 +143,8 @@
         </div>
         <div class="6/12">
 
-            <div class="flex flex-1 flex-col py-22 gap-5 ">
-                <div class=" flex flex-1 w-full   gap-5 px-10 ">
+            <div class="flex flex-1 flex-col py-10 mt-10 py-22 gap-5 ">
+                <div class=" flex flex-1 w-full     gap-5 px-10 ">
                     <div class="flex gap-2 w-[48vh] justify-between items-center bg-white shadow-lg rounded px-3 py-2">
                         <div class="flex gap-2">
                             <img src="image/test-1.svg" alt="">
@@ -173,7 +173,7 @@
 
                 </div>
 
-                <div class=" flex flex-1 w-full   gap-5 px-10 ">
+                <div class=" flex flex-1 w-full    gap-5 px-10 ">
                     <div class="flex gap-2 w-[48vh] justify-between items-center bg-white shadow-lg rounded px-3 py-2">
                         <div class="flex gap-2">
                             <img src="image/test-3.svg" alt="">

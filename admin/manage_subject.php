@@ -1,5 +1,6 @@
 <?php
 include_once "../config/connect.php";
+include_once "includes/redirectIfNotAuth.php";
 $callingSubject = $connect->query("select * from subject ");
 $counts = mysqli_num_rows($callingSubject);
 ?>
